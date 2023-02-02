@@ -18,7 +18,7 @@ public class SampleContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         if (!optionsBuilder.IsConfigured)
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;User=postgres;Password=postgres;Database=sample");
+            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;UserName=postgres;Password=postgres;Database=sample");
         
         if (!optionsBuilder.Options.IsFrozen)  // <---- Adding the extension here
             optionsBuilder.UseNoOpExtension(); // ALL extensions added here MUST be re-added in Test setup
