@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <!-- npgsql.ef nightly -->
+    <PropertyGroup>
+        <RestoreAdditionalProjectSources>
+            https://www.myget.org/F/npgsql/api/v3/index.json;
+            $(RestoreAdditionalProjectSources)
+        </RestoreAdditionalProjectSources>
+    </PropertyGroup>
+
+</Project>
