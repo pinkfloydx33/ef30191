@@ -15,8 +15,8 @@ public class TestFixture: IAsyncLifetime
     {
         // Set your connection string!!!!!!!
         // In our actual scenario test scenario, each TestFixture/TestClass runs against a dedicated 
-		// docker container (server) so it's necessary to create multiple DbDataSources. For normal 
-		// execution of our application we only use one	
+        // docker container (server) so it's necessary to create multiple DbDataSources. For normal 
+        // execution of our application we only use one	
         // To mimic the docker-scenario, we use a different database per test fixture
         _connString = "Host=127.0.0.1;Port=5432;UserName=postgres;Password=postgres;Database=Test" + Guid.NewGuid().ToString("N");
         _dataSource = new NpgsqlDataSourceBuilder(_connString).Build();
@@ -38,7 +38,7 @@ public class TestFixture: IAsyncLifetime
         // // variant 2 (DbDataSource): no error
         // options.UseNpgsql(_dataSource)
         //     .UseNoOpExtension(); // <--- Need to re-add this even though it's added by Context! 
-                                    //      (must include *all* extensions added by context)
+        //                          //      (must include *all* extensions added by context)
 
         // // variant 3 (ConnectionString): no error
         // options.UseNpgsql(_connString);
