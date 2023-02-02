@@ -11,7 +11,8 @@ In our normal setup, each test class gets a **dedicated docker container** (serv
 We mimic that here by adding a Guid to the connection string. 
 
 1. You will need to set up the connection string for your local database
-2. Run all tests in the solution
+2. Run all tests in the solution 
+  - All test classes are identical, just duplicated to give enough dedicated test fixtures
 3. Repeat for the 4 permuatations identified below
 
 In `CreateOptions` there are four different setup scenarios. Comment them out in 
