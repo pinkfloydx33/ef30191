@@ -1,6 +1,9 @@
 # ef30191
 
 An extension is added in `OnConfiguring`. This extension does nothing whatsoever.
+It doesn't actually matter which extension we use here. The same issue occurs if you 
+use the No-Op one in this repository, or something like `EF.NamingConventions` (our 
+actual use-case)
 
 When setting up tests, if we don't re-add this extension in our test harness then 
 we will end up with `ManyServiceProvidersCreatedWarning`. This applies to **all**
