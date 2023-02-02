@@ -38,7 +38,7 @@ public class TestFixture: IAsyncLifetime
         // // variant 2 (DbDataSource): no error
         // options.UseNpgsql(_dataSource)
         //     .UseNoOpExtension(); // <--- Need to re-add this even though it's added by Context! 
-		                            //      (must include *all* extensions added by context)
+                                    //      (must include *all* extensions added by context)
 
         // // variant 3 (ConnectionString): no error
         // options.UseNpgsql(_connString);
