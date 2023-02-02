@@ -21,7 +21,8 @@ public class SampleContext : DbContext
             optionsBuilder.UseNpgsql("Host=localhost;Port=5432;User=postgres;Password=postgres;Database=sample");
         
         if (!optionsBuilder.Options.IsFrozen) // <---- Adding the extension here
-            optionsBuilder.UseNoOpExtension();
+            optionsBuilder.UseNoOpExtension(); // ALL extensions added here MUST be re-added in Test setup
+			                                   // otherwise we will experience ManyServiceProvidersCreatedWarning
 
     }
 
