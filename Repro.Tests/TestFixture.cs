@@ -45,7 +45,7 @@ public class TestFixture: IAsyncLifetime
 
         // // variant 4 (ConnectionString): no error
         // options.UseNpgsql(_connString)
-        //     .UseOurCustomizations();
+        //     .UseNoOpExtension();
 
 
         return options.Options;
